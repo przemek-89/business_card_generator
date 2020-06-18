@@ -4,7 +4,7 @@
   min-height: calc(100vh - 80px);
   text-align: center;
   color: #ffffff;
-  text-shadow: 0 0 20px 1px rgba(0,0,0,0.5);
+  text-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
   padding-top: 32px;
   position: relative;
 
@@ -12,7 +12,8 @@
     padding-top: 60px;
   }
 
-  &__title, &__subtitle {
+  &__title,
+  &__subtitle {
     font-family: 'Kaushan Script', cursive;
   }
 
@@ -29,7 +30,12 @@
       font-size: 48px;
     }
     span {
-      color: #2B88FB;
+      color: #2b88fb;
     }
+  }
+  .xyz {
+    width: 40px;
+    height: 40px;
+    background: red;
   }
 }
