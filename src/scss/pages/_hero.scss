@@ -1,0 +1,35 @@
+.hero {
+  background: image_url('background.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: calc(100vh - 80px);
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 0 20px 1px rgba(0,0,0,0.5);
+  padding-top: 32px;
+  position: relative;
+
+  @include smMin {
+    padding-top: 60px;
+  }
+
+  &__title, &__subtitle {
+    font-family: 'Kaushan Script', cursive;
+  }
+
+  &__title {
+    font-size: 36px;
+    @include smMin {
+      font-size: 52px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 32px;
+    @include smMin {
+      font-size: 48px;
+    }
+    span {
+      color: #2B88FB;
+    }
+  }
+}

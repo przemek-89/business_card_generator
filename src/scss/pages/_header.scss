@@ -1,0 +1,70 @@
+.header {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    padding: 18px 0;
+  }
+
+  &__logo {
+    text-indent: -99999px;
+    width: 133px;
+    height: 38px;
+    background: image_url('logo.svg') no-repeat 0 0;
+    background-size: contain;
+    @include smMin {
+      width: 154px;
+      height: 44px;
+    }
+  }
+}
+
+.line {
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background: red;
+}
+
+#burger {
+  display: flex;
+  flex-direction: column;
+  height: 24px;
+  justify-content: space-between;
+  cursor: pointer;
+
+  @include smMin {
+    display: none;
+  }
+}
+
+#menu {
+  display: none;
+  &.active {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    color: white;
+    background: grey;
+    position: absolute;
+    width: 100vw;
+    height: calc(100vh - 80px);
+    z-index: 9999;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+
+  }
+  @include smMin {
+    display: inline-block;
+  }
+
+  .link {
+    padding: 20px 30px;
+    margin: 5px 0;
+  }
+}
+
+

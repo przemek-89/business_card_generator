@@ -1,0 +1,118 @@
+//*** SCREEN SIZES ***//
+
+// 320 - 479 px
+$screen-ts-max: 479px;
+
+// 480 - 767 px
+$screen-xs-min: 480px;
+$screen-xs-max: 767px;
+
+// 768 - 991 px
+$screen-sm-min: 768px;
+$screen-sm-max: 991px;
+
+// 992 - 1199px
+$screen-md-min: 992px;
+$screen-md-max: 1299px;
+
+// 1200 - inf px
+$screen-lg-min: 1300px;
+
+// Screen media breakpoints
+$screen-ts: "screen and (min-width: 0) and (max-width: #{$screen-ts-max})";
+$screen-xs: "screen and (min-width: #{$screen-xs-min}) and (max-width: #{$screen-xs-max})";
+$screen-sm: "screen and (min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max})";
+$screen-md: "screen and (min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max})";
+$screen-lg: "screen and (min-width: #{$screen-lg-min})";
+
+@mixin tsMax {
+  @media screen and (max-width: #{$screen-ts-max}) {
+    @content;
+  }
+}
+
+@mixin xsMin {
+  @media screen and (min-width: #{$screen-xs-min}) {
+    @content;
+  }
+}
+
+@mixin xsMax {
+  @media screen and (max-width: #{$screen-xs-max}) {
+    @content;
+  }
+}
+
+@mixin smMin {
+  @media screen and (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+@mixin smMax {
+  @media screen and (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+@mixin mdMin {
+  @media screen and (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+@mixin mdMax {
+  @media screen and (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+@mixin lgMin {
+  @media screen and (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin tsOnly {
+  @media #{$screen-ts} {
+    @content;
+  }
+}
+
+@mixin xsOnly {
+  @media #{$screen-xs} {
+    @content;
+  }
+}
+
+@mixin smOnly {
+  @media #{$screen-sm} {
+    @content;
+  }
+}
+
+@mixin mdOnly {
+  @media #{$screen-md} {
+    @content;
+  }
+}
+
+@mixin lgOnly {
+  @media #{$screen-lg} {
+    @content;
+  }
+}
+
+// Media Queries - Retina display
+$retina: "(-webkit-min-device-pixel-ratio: 2),(min-resolution: 2dppx)"; // All retina devices
+
+$retina-tablet: "(-webkit-min-device-pixel-ratio: 2) and (min-device-width: 768px),(min-resolution: 2dppx) and (min-device-width: 768px)"; // Larger than iPad display
+
+$retina-pc: "(-webkit-min-device-pixel-ratio: 2) and (min-device-width: 1025px),(min-resolution: 2dppx) and (min-device-width: 1025px)"; // Larger than PC display (1025px)
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content }
+  &:-moz-placeholder { @content }
+  &::-moz-placeholder { @content }
+  &:-ms-input-placeholder { @content }
+}
