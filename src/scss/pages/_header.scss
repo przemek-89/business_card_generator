@@ -1,4 +1,5 @@
 .header {
+  background: #ffffff;
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -12,7 +13,7 @@
     text-indent: -99999px;
     width: 133px;
     height: 38px;
-    background: image_url('logo.svg') no-repeat 0 0;
+    background: image_url('logo.png') no-repeat 0 0;
     background-size: contain;
     @include smMin {
       width: 154px;
@@ -21,50 +22,91 @@
   }
 }
 
-.line {
-  display: inline-block;
-  width: 20px;
-  height: 2px;
-  background: red;
-}
-
-#burger {
+#hamburger {
+  box-sizing: border-box;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  height: 24px;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: solid 1px black;
+  border-radius: 4px;
   cursor: pointer;
 
   @include smMin {
     display: none;
   }
+
+  &:hover,
+  &:focus {
+    .line {
+      background: black;
+    }
+  }
+
+  &.active .line {
+    &:nth-child(1) {
+      transform: translateY(5px) rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:nth-child(3) {
+      transform: translateY(-5px) rotate(-45deg);
+    }
+  }
 }
 
-#menu {
+.hamburger__line--wrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 12px;
+  height: 11px;
+}
+
+.hamburger__line {
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background: red;
+  transition: all 0.2s ease-in-out;
+}
+
+#header__menu {
   display: none;
   &.active {
+    text-align: center;
     display: flex;
     flex-direction: column;
     padding: 30px;
     color: white;
-    background: grey;
+    background: #cdcdcd;
     position: absolute;
     width: 100vw;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 76px);
     z-index: 9999;
-    top: 80px;
+    top: 76px;
     left: 50%;
     transform: translateX(-50%);
-
   }
   @include smMin {
     display: inline-block;
   }
 
-  .link {
+  .header__menu--item {
     padding: 20px 30px;
     margin: 5px 0;
   }
 }
 
-
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
