@@ -1,62 +1,102 @@
 @keyframes pulse {
   0% {
-    transform:scale(0.1);
+    transform: scale(0.1);
     opacity: 0;
   }
   2.5% {
-    opacity:0.6;
+    opacity: 0.6;
   }
   50% {
-    transform:scale(0.8);
-    opacity:0;
+    transform: scale(0.8);
+    opacity: 0;
   }
   100% {
-    transform:scale(0.8);
-    opacity:0;
+    transform: scale(0.8);
+    opacity: 0;
   }
 }
 
 @keyframes pulse-delayed {
   0% {
-    transform:scale(0.1);
+    transform: scale(0.1);
     opacity: 0;
   }
   6% {
-    opacity:0.6;
-    transform:scale(0.1);
+    opacity: 0.6;
+    transform: scale(0.1);
   }
   100% {
-    transform:scale(0.8);
-    opacity:0;
+    transform: scale(0.8);
+    opacity: 0;
   }
 }
 
 @keyframes height {
-  0%{transform:scale(0.3);}
-  20% {transform:scale(1.05);}
-  40% {transform:scale(0.9);}
-  60% {transform:scale(1.03);}
-  80% {transform:scale(0.97);}
-  100% {transform:scale(1);}
+  0% {
+    transform: scale(0.3);
+  }
+  20% {
+    transform: scale(1.05);
+  }
+  40% {
+    transform: scale(0.9);
+  }
+  60% {
+    transform: scale(1.03);
+  }
+  80% {
+    transform: scale(0.97);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes scale {
-  0%{max-width: 0; opacity: 0;}
-  100% {max-width: 100%; opacity: 1;}
+  0% {
+    max-width: 0;
+    opacity: 0;
+  }
+  100% {
+    max-width: 100%;
+    opacity: 1;
+  }
 }
 
 @keyframes opacity {
-  0%{opacity: 0;}
-  100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes width {
-  0%{width: 0;}
-  100% {width: 100%;}
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(359deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
 }
-
+@keyframes anime_abautAs {
+  0% {
+    background: image_url('anime1.jpg');
+  }
+  33% {
+    background: image_url('anime2.jpg');
+  }
+  66% {
+    background: image_url('anime3.jpg');
+  }
+}
