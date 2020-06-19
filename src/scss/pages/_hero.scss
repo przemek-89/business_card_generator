@@ -5,11 +5,16 @@
   text-align: center;
   color: #ffffff;
   text-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
-  padding-top: 32px;
   position: relative;
 
   @include smMin {
     padding-top: 60px;
+  }
+  @include xsMax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 80px;
   }
 
   &__title,
