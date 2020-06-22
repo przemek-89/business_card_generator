@@ -15,7 +15,7 @@
     "clean": "rimraf dist",
     "build": "npm run clean && npm-cache clean && npm-run-all -p build:* && npm run ejs && npm run minifier",
     "build:css": "npm-run-all scss autoprefixer",
-    "build:js": "mkdir -p dist/js && uglifyjs src/js/aos.js src/js/slick.js src/js/script-core.js --compress -o dist/js/scripts.js",
+    "build:js": "mkdir -p dist/js && uglifyjs src/js/aos.js src/js/macy.js src/js/slick.js src/js/script-core.js --compress -o dist/js/scripts.js",
     "build:images": "imagemin src/images/* -o dist/images",
     "build:public": "imagemin src/public/* -o dist/public",
     "build:fonts": "imagemin src/fonts/* -o dist/fonts",

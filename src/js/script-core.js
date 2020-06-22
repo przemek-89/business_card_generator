@@ -41,4 +41,20 @@
       }
     }
   });
+  //this opytions of gallery
+  const macy = Macy({
+    container: '#container-macy',
+    trueOrder: false,
+    waitForImages: false,
+    margin: {
+      x: 24,
+      y: 20,
+    },
+    columns: 3,
+    breakAt: {
+      940: 3,
+      780: 2,
+      400: 1,
+    },
+  });
 })();
